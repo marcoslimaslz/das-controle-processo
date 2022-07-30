@@ -1,22 +1,17 @@
 DO $$ BEGIN
-  IF EXISTS(select 1 from information_schema.tables where table_name='item_do_pedido') THEN
+
+	IF EXISTS(select 1 from information_schema.tables where table_name='item_do_pedido') THEN
      drop table item_do_pedido;
   END IF;
-END $$;
 
-DO $$ BEGIN
   IF EXISTS(select 1 from information_schema.tables where table_name='pedido') THEN
      drop table pedido;
   END IF;
-END $$;
 
-DO $$ BEGIN
   IF EXISTS(select 1 from information_schema.tables where table_name='produto') THEN
      drop table produto;
   END IF;
-END $$;
 
-DO $$ BEGIN
   IF EXISTS(select 1 from information_schema.tables where table_name='cliente') THEN
      drop table cliente;
   END IF;
